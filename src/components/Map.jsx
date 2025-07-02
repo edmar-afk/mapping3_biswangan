@@ -1,4 +1,13 @@
-import { useState } from "react";import { MapContainer, TileLayer, useMapEvents, Marker, Popup } from "react-leaflet";import "leaflet/dist/leaflet.css";import L from "leaflet";import api from "../assets/api";import Sidebar from "./Sidebar";import TopBar from "./TopBar";import FeedBack from "./FeedBack";delete L.Icon.Default.prototype._getIconUrl;L.Icon.Default.mergeOptions({
+import { useState } from "react";
+import { MapContainer, TileLayer, useMapEvents, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import api from "../assets/api";
+import Sidebar from "./Sidebar";
+import TopBar from "./TopBar";
+import FeedBack from "./FeedBack";
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
 	iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
 	iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
 	shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
@@ -81,7 +90,7 @@ function Map() {
 				<div className="flex-1 relative">
 					<MapContainer
 						center={[7.852878, 123.190707]}
-						zoom={17}
+						zoom={16}
 						className="w-full h-full"
 						style={{ height: "100%", width: "100%", borderRadius: "8px" }}>
 						<TileLayer
@@ -129,7 +138,7 @@ function Map() {
 														Name: {item.name} <br />
 														Type: {item.type} <br />
 														<img
-															src={item.image_url || "https://images.unsplash.com/photo-1499856871958-5b9627545d1a"}
+															src={item.image || "https://images.unsplash.com/photo-1499856871958-5b9627545d1a"}
 															alt={item.name}
 															style={{ width: "100%", height: "auto", marginTop: "5px" }}
 														/>

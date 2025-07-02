@@ -25,7 +25,7 @@ function Sidebar({ categoryKey }) {
 						<>
 							{" "}
 							
-							<FeedBack />
+						<p className="text-center text-xl text-gray-500 italic mt-8">Click the top to see statistics</p>
 						</>
 					)}
 				</div>

@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { Modal } from "@mui/material";
-import api from "../assets/api";
+import React, { useState } from "react";import { Modal } from "@mui/material";import api from "../assets/api";
 
 const modalStyle = {
 	position: "absolute",
@@ -37,17 +35,19 @@ function FeedBack() {
 
 	return (
 		<>
-			<button
-				className="mx-auto text-center bg-green-600 text-white p-4 rounded-lg flex"
-				onClick={handleOpen}>
-				Send Feedback
-			</button>
+			<div className="flex flex-row items-center justify-center">
+				<button
+					className="text-center bg-green-600 text-white p-4 rounded-lg"
+					onClick={handleOpen}>
+					Send Feedback
+				</button>
+				<a className="font-bold text-xl ml-3 text-green-700" href="https://mapping3.pythonanywhere.com/admin/" target="_blank">Admin Login</a>
+			</div>
 
 			<Modal
 				open={open}
 				onClose={handleClose}>
 				<div style={modalStyle}>
-				
 					<form
 						onSubmit={handleSubmit}
 						className="flex flex-col gap-4">
