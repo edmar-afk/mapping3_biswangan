@@ -49,11 +49,7 @@ function HouseholdChart() {
 										className="px-6 py-3">
 										Role
 									</th>
-									<th
-										scope="col"
-										className="px-6 py-3">
-										<span className="sr-only">Edit</span>
-									</th>
+									
 								</tr>
 							</thead>
 							<tbody>
@@ -69,13 +65,7 @@ function HouseholdChart() {
 											</th>
 											<td className="px-6 py-4">{member.age}</td>
 											<td className="px-6 py-4">{member.role}</td>
-											<td className="px-6 py-4 text-right">
-												<a
-													href="#"
-													className="font-medium text-blue-600 hover:underline">
-													Edit
-												</a>
-											</td>
+											
 										</tr>
 									))
 								) : (
