@@ -14,10 +14,10 @@ function TopBar({ onCategorySelect, activeCategory }) {
 			label: "Senior Citizens",
 			key: "seniors",
 		},
-		// {
-		// 	label: "Households",
-		// 	key: "households",
-		// },
+		{
+			label: "Households",
+			key: "households",
+		},
 		{
 			label: "Feedbacks",
 			key: "feedbacks",
