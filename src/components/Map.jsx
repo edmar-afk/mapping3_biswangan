@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { MapContainer, TileLayer, useMapEvents, Marker, Popup } from "react-leaflet";
+import { useState } from "react";import { MapContainer, TileLayer, useMapEvents, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import api from "../assets/api";
@@ -148,6 +147,18 @@ function Map() {
 														Name: {item.people} <br />
 														Age: {item.age} <br />
 														Gender: {item.gender}
+													</>
+												) : activeCategory === "households" ? (
+													<>
+														Family Name: {item.family_name} <br />
+														Members:
+														<ul className="list-disc ml-4">
+															{item.members.map((member, idx) => (
+																<li key={idx}>
+																	{member.name} – {member.age} yrs – {member.role}
+																</li>
+															))}
+														</ul>
 													</>
 												) : (
 													"Unknown category"
